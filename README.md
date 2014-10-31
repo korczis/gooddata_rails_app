@@ -19,4 +19,8 @@ bundle install
 
 ```
 ./bin/rails server
+
+# or
+
+GD_GEM_USER="some.user@gooddata.com" && GD_GEM_PASSWORD='s0m3.p4ssw0rth' && ./bin/rails server
 ```
