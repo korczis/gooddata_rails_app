@@ -1,3 +1,11 @@
 <h1><%= @project.title %></h1>
 
+<div>
+  <span>Author: </span><span> <%= link_to "#{@project.author.first_name} #{@project.author.last_name}", user_path(@project.author.obj_id) %></span>
+</div>
+
+<div>
+  <span>Contributor: </span><span> <%= link_to "#{@project.contributor.first_name} #{@project.contributor.last_name}", user_path(@project.contributor.obj_id) %></span>
+</div>
+
 <h2><%= link_to('Users', project_users_path(:project_id => @project.pid)) %></h2>

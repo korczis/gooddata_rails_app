@@ -14,8 +14,11 @@ class UsersController < ApplicationController
   end
 
   def show
-    # @user = GoodDataRailsApp::Application.get_connection.projects(params[:id])
-    # acc = GoodDataRailsApp::Profile[params[:id], :client => GoodDataRailsApp::Application.get_connection]
+    @user = GoodData::Profile[params[:id], :client => GoodDataRailsApp::Application.get_connection]
+    begin
+      @projects = @user.projects
+    rescue Exception => e
+      @projects = nil
+    end
   end
-
 end

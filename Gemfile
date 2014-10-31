@@ -38,4 +38,5 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-gem 'gooddata'
+# gem 'gooddata'
+gem 'gooddata', :git => 'https://github.com/korczis/gooddata-ruby.git', :branch => 'fix-profile-indexer'
